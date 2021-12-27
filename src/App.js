@@ -1,14 +1,11 @@
 import { useState, useEffect } from 'react'
 import { ethers } from 'ethers'
 import Modal from './components/Modal'
-import twitterLogo from './assets/svgviewer-output.svg'
 import openseaLogo from './assets/opensea-logo.png'
 import myEpicNft from './utils/MyEpicNFT.json'
 import './App.css';
 
-// const TWITTER_HANDLE = 'JamesJin';
 const OPENSEA_LINK = 'https://testnets.opensea.io/collection/squarenft-exc8c2isgt';
-// const TOTAL_MINT_COUNT = 50;
 
 const CONTRACT_ADDRESS = "0xA189C3ee653034557Db56721E03331Cf2D1f2867";
 
@@ -17,8 +14,6 @@ const App = () => {
   const [currentAccount, setCurrentAccount] = useState("")
   const [miningAnimation, setMiningAnimation] = useState(false)
   const [mintTotal, setMintTotal] = useState(totalMinted)
-  // const [currentNetwork, setCurrentNetwork] = useState("")
-
   
 
   const connectWallet = async () => {
