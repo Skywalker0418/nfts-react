@@ -9,11 +9,12 @@ module.exports = {
         accounts: process.env.MUMBAI_PRIVATE_KEY !== undefined ? [process.env.MUMBAI_PRIVATE_KEY] : [],
         gasPrice: 10000000000,
     }
-    // ,
-    // rinkeby: {
-    //   url: process.env.ALCHEMY_KEY,
-    //   accounts: [process.env.PK],
-    // },
+    ,
+    rinkeby: {
+      url: process.env.RINKEBY_URL,
+      accounts: process.env.RINKEBY_PRIVATE_KEY !== undefined ? [process.env.RINKEBY_PRIVATE_KEY] : [],
+      gasPrice: 10000000000,
+    },
     
     // mainnet: {
     //   chainId: 1,

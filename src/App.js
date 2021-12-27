@@ -10,7 +10,7 @@ import './App.css';
 const OPENSEA_LINK = 'https://testnets.opensea.io/collection/squarenft-exc8c2isgt';
 // const TOTAL_MINT_COUNT = 50;
 
-const CONTRACT_ADDRESS = "0x4680f7c1b0Bb03ee1aFfD5C10058A96223Da15FF";
+const CONTRACT_ADDRESS = "0xA189C3ee653034557Db56721E03331Cf2D1f2867";
 
 const App = () => {
   let totalMinted
