@@ -8,7 +8,7 @@ import './App.css';
 
 const TWITTER_HANDLE = 'JamesJin';
 const OPENSEA_LINK = 'https://testnets.opensea.io/collection/squarenft-exc8c2isgt';
-const TOTAL_MINT_COUNT = 50;
+// const TOTAL_MINT_COUNT = 50;
 
 const CONTRACT_ADDRESS = "0x4680f7c1b0Bb03ee1aFfD5C10058A96223Da15FF";
 
@@ -17,7 +17,7 @@ const App = () => {
   const [currentAccount, setCurrentAccount] = useState("")
   const [miningAnimation, setMiningAnimation] = useState(false)
   const [mintTotal, setMintTotal] = useState(totalMinted)
-  const [currentNetwork, setCurrentNetwork] = useState("")
+  // const [currentNetwork, setCurrentNetwork] = useState("")
 
   const checkIfWalletIsConnected = async () => {
     const { ethereum } = window;
