@@ -153,7 +153,7 @@ const App = () => {
       }
       <div className="container">
         <div className="header-container">
-          <p className="header gradient-text">Jacob's NFT Collection</p>
+          <p className="header gradient-text">James NFT Collection</p>
           <a
             className="opensea-button"
             href={OPENSEA_LINK}
@@ -170,7 +170,6 @@ const App = () => {
           {currentAccount === "" ? renderNotConnectedContainer() : renderMintUI()}
         </div>
         <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
         </div>
       </div>
       <div className="circle1"></div>
