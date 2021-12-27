@@ -6,12 +6,11 @@ import openseaLogo from './assets/opensea-logo.png'
 import myEpicNft from './utils/MyEpicNFT.json'
 import './App.css';
 
-const TWITTER_HANDLE = 'JacobZavita';
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
+const TWITTER_HANDLE = 'JamesJin';
 const OPENSEA_LINK = 'https://testnets.opensea.io/collection/squarenft-exc8c2isgt';
 const TOTAL_MINT_COUNT = 50;
 
-const CONTRACT_ADDRESS = "0xC927f6b7DAc4B660349D596d219f6eA7B7C01B57";
+const CONTRACT_ADDRESS = "0x4680f7c1b0Bb03ee1aFfD5C10058A96223Da15FF";
 
 const App = () => {
   let totalMinted
@@ -171,7 +170,6 @@ const App = () => {
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a
             className="footer-text"
-            href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
           >{`built with @_buildspace by @${TWITTER_HANDLE}`}</a>
