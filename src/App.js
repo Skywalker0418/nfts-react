@@ -6,7 +6,7 @@ import openseaLogo from './assets/opensea-logo.png'
 import myEpicNft from './utils/MyEpicNFT.json'
 import './App.css';
 
-const TWITTER_HANDLE = 'JamesJin';
+// const TWITTER_HANDLE = 'JamesJin';
 const OPENSEA_LINK = 'https://testnets.opensea.io/collection/squarenft-exc8c2isgt';
 // const TOTAL_MINT_COUNT = 50;
 
@@ -19,28 +19,7 @@ const App = () => {
   const [mintTotal, setMintTotal] = useState(totalMinted)
   // const [currentNetwork, setCurrentNetwork] = useState("")
 
-  const checkIfWalletIsConnected = async () => {
-    const { ethereum } = window;
-
-    if (!ethereum) {
-      console.log("Make sure you have metamask!")
-      return;
-    } else {
-      console.log("We have the ethereum object", ethereum);
-      console.log(window.ethereum.networkVersion, 'window.ethereum.networkVersion');
-    }
-    
-    const accounts = await ethereum.request({ method: 'eth_accounts' });
-    
-    if (accounts.length !== 0) {
-      const account = accounts[0];
-      console.log("Found an authorized account:", account);
-      setCurrentAccount(account)
-      setupEventListener()
-    } else {
-      console.log("No authorized account found")
-    }
-  }
+  
 
   const connectWallet = async () => {
     try {
@@ -110,9 +89,33 @@ const App = () => {
       }
   }
 
-  useEffect(() => {
-    checkIfWalletIsConnected()
-    getTotalNFTsMintedSoFar()
+  useEffect(() => {    
+    const checkIfWalletIsConnected = async () => {
+      const { ethereum } = window;
+
+      if (!ethereum) {
+        console.log("Make sure you have metamask!")
+        return;
+      } else {
+        console.log("We have the ethereum object", ethereum);
+        console.log(window.ethereum.networkVersion, 'window.ethereum.networkVersion');
+      }
+      
+      const accounts = await ethereum.request({ method: 'eth_accounts' });
+      
+      if (accounts.length !== 0) {
+        const account = accounts[0];
+        console.log("Found an authorized account:", account);
+        setCurrentAccount(account)
+        setupEventListener()
+      } else {
+        console.log("No authorized account found")
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    checkIfWalletIsConnected();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    getTotalNFTsMintedSoFar();
   }, [])
 
   const renderNotConnectedContainer = () => (
@@ -127,9 +130,9 @@ const App = () => {
     </button>
   )
 
-  const renderNetworkPrompt = () => (
-    alert("Hello there, This app is built on the rinkeby testnet and it looks like you are on a different ethereum network. Please switch to the Rinkeby testnet to continue")
-  )
+  // const renderNetworkPrompt = () => (
+  //   alert("Hello there, This app is built on the rinkeby testnet and it looks like you are on a different ethereum network. Please switch to the Rinkeby testnet to continue")
+  // )
 
   const getTotalNFTsMintedSoFar = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -168,11 +171,6 @@ const App = () => {
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
-          <a
-            className="footer-text"
-            target="_blank"
-            rel="noreferrer"
-          >{`built with @_buildspace by @${TWITTER_HANDLE}`}</a>
         </div>
       </div>
       <div className="circle1"></div>
