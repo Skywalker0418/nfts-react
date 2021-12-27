@@ -5,7 +5,7 @@ import openseaLogo from './assets/opensea-logo.png'
 import myEpicNft from './utils/MyEpicNFT.json'
 import './App.css';
 
-const OPENSEA_LINK = 'https://testnets.opensea.io/collection/squarenft-exc8c2isgt';
+const OPENSEA_LINK = 'https://testnets.opensea.io/collection/squarenft-9oijxzi022';
 
 const CONTRACT_ADDRESS = "0xA189C3ee653034557Db56721E03331Cf2D1f2867";
 
